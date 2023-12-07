@@ -28,7 +28,7 @@ public class PlayGame {
         doors.add(new Door(true));
         doors.add(new Door(false));
         doors.add(new Door(false));
-        Collections.shuffle(doors); // перемивание дверей
+        Collections.shuffle(doors); // перемешивание дверей
         return doors;
     }
 }
