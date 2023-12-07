@@ -23,13 +23,12 @@ public class PlayGame {
 
         System.out.println("Из " + step + " игр игрок выиграл " + statisticWin);
     }
-
-    private static List<Door> getDoors() {
+    private static List<Door> getDoors() { // создание дверей
         List<Door> doors = new ArrayList<>();
         doors.add(new Door(true));
         doors.add(new Door(false));
         doors.add(new Door(false));
-        Collections.shuffle(doors);
+        Collections.shuffle(doors); // перемивание дверей
         return doors;
     }
 }
