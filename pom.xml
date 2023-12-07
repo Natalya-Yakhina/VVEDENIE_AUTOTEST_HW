@@ -21,7 +21,6 @@
 
     <!-- Зависимости -->
     <dependencies>
-
         <!-- Добавить зависимости JUnit -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -36,7 +35,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <!-- Сборка -->
