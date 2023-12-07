@@ -15,14 +15,13 @@ public class PlayGame {
         int statisticWin = 0; // статистика Выигрыша
         int step; // step
 
-        for (step = 0; step<1000; step++) {
+        for (step = 0; step < 1000; step++) {
             Game game = new Game(gamer, getDoors());
 
             if (game.round(0).isPrize()) statisticWin++;
         }
 
         System.out.println("Из " + step + " игр игрок выиграл " + statisticWin);
-
     }
 
     private static List<Door> getDoors() {
