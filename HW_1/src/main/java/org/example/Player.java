@@ -4,10 +4,9 @@ public class Player {
     /**
      * Класс для описания игрока
      */
-    //имя игрока
-    private String name;
-    //стратегия игрока, если true игрок меняет дверь
-    private boolean risk;
+    private String name;     //имя игрока
+
+    private boolean risk;    //стратегия игрока, если true игрок меняет дверь
 
     public Player(String name, boolean risk) {
         this.name = name;
