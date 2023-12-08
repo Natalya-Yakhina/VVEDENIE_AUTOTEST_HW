@@ -1,7 +1,10 @@
-import org.example.Door;
-import org.example.Game;
-import org.example.Player;
+package HW__1;
+
+import org.example.HW__1.Door;
+import org.example.HW__1.Game;
+import org.example.HW__1.Player;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +14,7 @@ import java.util.List;
 public class TestingGameTest {
     static List<Door> doors; // создаем три двери
 
-    @BeforeEach
+    @BeforeAll // можно использовать @BeforeAll, т.к. один и тот же список используется во всех тестах
     void Doors() {
         doors = new ArrayList<>();
         doors.add(new Door(true));  // выигрыш
