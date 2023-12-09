@@ -8,6 +8,8 @@ public class Package implements Products { // упаковка
 
     @Override
     public Long getSum() {
+        //у Вас тут будет бесконечная рекурсия
+        //Exception in thread "main" java.lang.StackOverflowError
         return getSum();
     }
 }
