@@ -14,6 +14,9 @@
         <maven.compiler.target>17</maven.compiler.target>
         <junit.version>5.7.2</junit.version>
         <surefire.version>2.22.2</surefire.version>
+        <assured.version>5.3.0</assured.version>
+        <jackson.version>2.15.0</jackson.version>
+        <surefire.version>2.22.2</surefire.version>
     </properties>
 
     <!-- Архивирование -->
@@ -21,49 +24,68 @@
 
     <!-- Зависимости -->
     <dependencies>
-        <!-- Добавить зависимости JUnit -->
+        <!-- Лекция 1.Зависимости junit -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- Лекция 3. Rest Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Лекция 3. Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
-    <!-- Сборка -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
-            </plugin>
 
-            <!-- Plugin для запуска тестовых классов - т.е. запуск тестов -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire.version}</version>
-            </plugin>
-        </plugins>
-    </build>
+        <!-- Сборка -->
+<build>
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>17</source>
+            <target>17</target>
+        </configuration>
+    </plugin>
 
-    <!-- Репозитории -->
-    <repositories>
-        <repository>
-            <id>mvnrepository</id>
-            <url>https://mvnrepository.com/</url>
-        </repository>
-    </repositories>
+    <!-- Plugin для запуска тестовых классов - т.е. запуск тестов -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${surefire.version}</version>
+    </plugin>
+</plugins>
+</build>
 
-</project>
+        <!-- Репозитории -->
+<repositories>
+<repository>
+    <id>mvnrepository</id>
+    <url>https://mvnrepository.com/</url>
+</repository>
+</repositories>
+
+        </project>
