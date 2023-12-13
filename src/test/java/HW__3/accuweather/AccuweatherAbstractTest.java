@@ -22,8 +22,8 @@ public abstract class AccuweatherAbstractTest {
         configFile = new FileInputStream("src/test/resources/accuweather.properties");
         prop.load(configFile);
 
-        apiKey =  prop.getProperty("apikey");
-        baseUrl= prop.getProperty("base_url");
+        apiKey = prop.getProperty("apikey");
+        baseUrl = prop.getProperty("base_url");
 
     }
 
@@ -34,5 +34,4 @@ public abstract class AccuweatherAbstractTest {
     public static String getBaseUrl() {
         return baseUrl;
     }
-
 }
